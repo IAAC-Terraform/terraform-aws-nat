@@ -16,3 +16,9 @@ variable "nat_gateway_route" {
 }
 
 variable "count" {}
+
+variable "destination_cidr_block" {}
+
+variable "route_table_id" {
+  type = "list"
+}
