@@ -1,7 +1,7 @@
 resource "aws_nat_gateway" "ngw" {
   count         = "${var.create_vpc && var.nat_gateway_route ? var.count : 0}"
   allocation_id = "${element(var.allocation_id, count.index)}"
-  subnet_id     = "${var.subnet_id}"          # Public subnet id
+  subnet_id     = "${element(var.subnet_id, 0)}"          # Public subnet id
 
   tags {
     Name = "${var.env}-ngw-0${count.index + 1}"

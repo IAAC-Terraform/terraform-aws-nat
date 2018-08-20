@@ -2,7 +2,7 @@ variable "env" {}
 
 variable "subnet_id" {
   description = "The Public Subnet ID"
-  default     = ""
+  type = "list"
 }
 
 variable "create_vpc" {}
