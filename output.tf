@@ -1,10 +1,6 @@
 output "ngw" {
-  value = "${element(concat(aws_nat_gateway.ngw.*.id, list("")), 0)}"
+  value = "${aws_nat_gateway.ngw.*.id}"
 }
-
-/*output "ngwsubnet" {
-    value = "${aws_nat_gateway.ngw.*.subnet_id}"
-}*/
 
 output "ngwnetwork_interface_id" {
   value = "${aws_nat_gateway.ngw.*.network_interface_id}"
