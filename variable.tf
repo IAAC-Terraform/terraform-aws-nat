@@ -7,7 +7,9 @@ variable "subnet_id" {
 
 variable "create_vpc" {}
 
-variable "allocation_id" {}
+variable "allocation_id" {
+  type = "list"
+}
 
 variable "nat_gateway_route" {
   default = "false"
