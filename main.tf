@@ -6,11 +6,11 @@ resource "aws_nat_gateway" "ngw" {
   tags {
     Name = "${var.env}-ngw-0${count.index}"
   }
-  lifecycle {
+  /*lifecycle {
         ignore_changes = [
             "tags"
         ]
-    }
+    }*/
 }
 
 resource "aws_route" "route" {
