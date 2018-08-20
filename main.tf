@@ -4,7 +4,8 @@ resource "aws_nat_gateway" "ngw" {
   subnet_id     = "${var.subnet_id}"          # Public subnet id
 
   tags {
-    Name = "${var.env}-ngw-0${count.index}"
+    Name = "${var.env}-ngw-0${count.index + 1}"
+    env = "${var.env}"
   }
   /*lifecycle {
         ignore_changes = [
