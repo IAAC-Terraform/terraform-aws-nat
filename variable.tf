@@ -12,3 +12,5 @@ variable "allocation_id" {}
 variable "nat_gateway_route" {
   default = "false"
 }
+
+variable "count" {}
