@@ -22,3 +22,5 @@ variable "destination_cidr_block" {}
 variable "route_table_id" {
   type = "list"
 }
+
+variable "nat_routes" {}
