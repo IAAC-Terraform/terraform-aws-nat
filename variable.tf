@@ -24,3 +24,7 @@ variable "route_table_id" {
 }
 
 variable "nat_routes" {}
+
+variable "tags" {}
+
+variable "name" {}
