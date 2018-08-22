@@ -3,7 +3,10 @@ resource "aws_nat_gateway" "ngw" {
   allocation_id = "${element(var.allocation_id, count.index)}"
   subnet_id     = "${element(var.subnet_id, 0)}"          # Public subnet id
 
-  tags = "${merge(map("Name", format("%s", var.name)), var.tags)}"
+  tags {
+      env = "${var.env}"
+      Name = "${var.name}-0${count.index + 1}"
+  }
 }
 
 resource "aws_route" "route" {
