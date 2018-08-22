@@ -27,4 +27,6 @@ variable "nat_routes" {}
 
 variable "tags" {}
 
-variable "name" {}
+variable "name" {
+  type = "map"
+}
